@@ -35,7 +35,7 @@ module Bootstrap
       def inject_backbone
         application_js_path = 'app/assets/javascripts/application.js'
 
-        if ::File.exists?(::File.join(destination_root, application_js_path))
+        if ::File.exist?(::File.join(destination_root, application_js_path))
           inject_into_file application_js_path, before: '//= require_tree' do
             "//= require bootstrap\n"
           end

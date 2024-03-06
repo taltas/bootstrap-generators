@@ -22,9 +22,9 @@ namespace :bootstrap do
     twitter_sass_bootstrap_dir = "tmp/bootstrap-sass-#{bootstrap_version}"
 
     # Make sure tmp/ dir exists
-    Dir.mkdir('tmp') unless File.exists?('tmp')
+    Dir.mkdir('tmp') unless File.exist?('tmp')
 
-    if File.exists?(twitter_bootstrap_dir)
+    if File.exist?(twitter_bootstrap_dir)
       puts "Twitter Bootstrap already downloaded."
     else
       # Download the latest version of Twitter Bootstrap
@@ -34,7 +34,7 @@ namespace :bootstrap do
       `unzip -d tmp tmp/bootstrap.zip`
     end
 
-    if File.exists?(twitter_sass_bootstrap_dir)
+    if File.exist?(twitter_sass_bootstrap_dir)
       puts "Twitter Bootstrap Sass already downloaded."
     else
       # Download the latest version of Twitter Bootstrap Sass
